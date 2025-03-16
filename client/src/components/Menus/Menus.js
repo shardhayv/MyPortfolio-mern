@@ -27,6 +27,7 @@ const menuItems = [
 const Menus = ({ toggle }) => {
   return (
     <>
+      {/* Show profile pic only if toggled open (desktop or mobile) */}
       {toggle && (
         <div className="navbar-profile-pic">
           <img src={Profile} alt="Profile Pic" />

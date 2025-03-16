@@ -4,7 +4,7 @@ import Convocation from "../../assets/images/convocation.jpg";
 
 const About = () => {
   return (
-    <section className="about container">
+    <section className="about container" id="about">
       <div className="row align-items-center">
         <div className="col-md-6 about-img">
           <img

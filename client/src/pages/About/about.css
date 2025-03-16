@@ -1,16 +1,16 @@
 .about {
   margin: 30px auto;
   padding: 20px;
-  max-width: 900px; /* Keeps section centered and well-proportioned */
+  max-width: 900px; /* keeps section centered and well-proportioned */
 }
 
 .about-img img {
   border-radius: 10px;
-  width: 100%; /* Makes image responsive */
-  max-width: 100%; /* Prevents overflow */
+  width: 100%; /* makes image responsive */
+  max-width: 100%;
   height: auto;
   display: block;
-  margin: auto; /* Centers the image */
+  margin: auto; /* centers the image */
 }
 
 .about-content {
@@ -18,12 +18,10 @@
   padding: 20px;
 }
 
+/* If you prefer to let Bootstrap stack the columns at smaller widths, 
+   you can remove or comment out the .row override. 
+   If you do want a custom break, you can do so here. */
 @media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .about-img,
   .about-content {
     text-align: center;
   }

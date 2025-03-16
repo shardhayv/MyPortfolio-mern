@@ -5,16 +5,16 @@ import Resume from "../../assets/docs/Shardhay-Vatshyayan-CV.pdf";
 
 const Home = () => {
   return (
-    <div className="container-fluid home-container">
+    <div className="container-fluid home-container" id="home">
       <div className="container home-content">
-        <h2>Hello 👋, I'm a </h2>
+        <h2>Hello 👋, I'm a</h2>
         <h1>
           <Typewriter
             options={{
               strings: [
-                "Network Engineer !",
-                "MERN Stack Developer !",
-                "Cybersecurity Enthusiast !",
+                "Network Engineer!",
+                "MERN Stack Developer!",
+                "Cybersecurity Enthusiast!",
               ],
               autoStart: true,
               loop: true,
