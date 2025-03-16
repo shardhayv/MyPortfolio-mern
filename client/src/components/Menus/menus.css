@@ -1,28 +1,53 @@
+/* Profile Image */
 .navbar-profile-pic img {
-  border-radius: 90px;
-  height: 150px;
-  width: 150px;
-  display: flex;
-  vertical-align: middle;
-  margin: 0 auto;
-  margin-top: 20px;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto 10px;
 }
 
+/* Navigation Items */
 .nav-item {
   color: white;
+  text-align: center; /* Aligns items properly */
   margin-top: 30px;
-  margin-left: 25px;
 }
 
+/* Navigation Links */
 .nav-link {
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px; /* Better spacing between icons and text */
+  padding: 12px 20px;
+  color: white;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-.nav-link svg {
-  margin-right: 10px;
-}
-
+/* Navigation Link Hover */
 .nav-link:hover {
   color: #f29f67;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Adjust SVG Icons */
+.nav-link svg {
+  font-size: 20px; /* Increase icon size for better visibility */
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .navbar-profile-pic img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nav-link {
+    justify-content: center; /* Center items in mobile view */
+  }
 }

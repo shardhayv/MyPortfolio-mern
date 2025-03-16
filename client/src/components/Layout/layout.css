@@ -1,26 +1,86 @@
+/* Sidebar Section */
 .sidebar-section {
   display: flex;
+  background-color: black;
 }
 
+/* Sidebar Default */
 .sidebar {
   height: 100vh;
   background-color: #1e1e2c;
   width: 90px;
+  position: fixed;
+  transition: width 0.3s ease-in-out; /* Smooth transition */
 }
 
-.sidebar-toggle {
-  width: 230px;
+/* Expanded Sidebar */
+.sidebar.expanded {
+  width: 200px;
 }
 
+/* Sidebar Toggle Button */
 .sidebar-toggle-icons {
   display: flex;
-  align-items: right;
-  justify-content: right;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 20px;
   cursor: pointer;
 }
 
-.sidebar-toggle-icons p svg {
+/* Toggle Icon */
+.sidebar-toggle-icons svg {
   background-color: #f29f67;
   color: white;
-  margin-top: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-toggle-icons svg:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Collapsed */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Adjust content margin when sidebar expands */
+.sidebar.expanded + .main-content {
+  margin-left: 200px;
+}
+
+/* Adjust content margin when sidebar collapses */
+.sidebar.collapsed + .main-content {
+  margin-left: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .sidebar.expanded {
+    width: 200px;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
 }

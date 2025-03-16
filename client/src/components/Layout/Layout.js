@@ -6,32 +6,29 @@ import Menus from "./../Menus/Menus";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(true);
-  // change toggle
+
+  // Toggle Sidebar
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
   return (
-    <>
-      <div className="sidebar-section">
-        <div className={toggle ? "sidebar-toggle sidebar" : "sidebar"}>
-          <div className="sidebar-toggle-icons">
-            <p onClick={handleToggle}>
-              {toggle ? (
-                <AiOutlineDoubleLeft size={30} />
-              ) : (
-                <AiOutlineDoubleRight size={30} />
-              )}
-            </p>
-          </div>
-          <Menus toggle={toggle} />
-        </div>
-
-        <div className="container">
-          <Home />
-        </div>
+    <div className="sidebar-section">
+      <div className={`sidebar ${toggle ? "expanded" : "collapsed"}`}>
+        <button className="sidebar-toggle-btn" onClick={handleToggle}>
+          {toggle ? (
+            <AiOutlineDoubleLeft size={30} />
+          ) : (
+            <AiOutlineDoubleRight size={30} />
+          )}
+        </button>
+        <Menus toggle={toggle} />
       </div>
-    </>
+
+      <div className="main-content">
+        <Home />
+      </div>
+    </div>
   );
 };
 

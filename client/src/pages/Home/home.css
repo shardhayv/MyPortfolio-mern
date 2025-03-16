@@ -1,0 +1,87 @@
+/* Home Container */
+.home-container {
+  height: 300px;
+  color: white;
+  text-align: center; /* Center content properly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Heading Styling */
+.home-content h2 {
+  padding: 5px;
+  padding-top: 30px;
+  font-size: 22px;
+}
+
+.home-content h1 {
+  padding: 5px;
+  color: #e0b50f;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Buttons Container */
+.home-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Hire Me Button */
+.home-buttons .btn-hire {
+  background-color: #3b8ff3;
+  color: white;
+  width: 160px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.home-buttons .btn-hire:hover {
+  background-color: white;
+  color: #3b8ff3;
+  transform: scale(1.1); /* Smooth zoom effect */
+}
+
+/* Resume Button */
+.home-buttons .btn-cv {
+  background-color: #f29f67;
+  color: white;
+  width: 160px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.home-buttons .btn-cv:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 24px;
+  }
+
+  .home-buttons {
+    flex-direction: column; /* Stack buttons on small screens */
+  }
+
+  .home-buttons .btn-hire,
+  .home-buttons .btn-cv {
+    width: 100%;
+  }
+}
